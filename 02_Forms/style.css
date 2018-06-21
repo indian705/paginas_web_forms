@@ -9,3 +9,25 @@ body {
     margin-top:0.3rem;
     margin-bottom:0.3rem;
 }
+
+.textarea-group {
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+textarea {
+    width: 20rem;
+    height: 10rem;;
+}
+
+.check-group {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 60%;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
