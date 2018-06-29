@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+	background-color: aquamarine;
+	text-transform: uppercase;
+	color: white;
+}
+.grid{
+	padding: 1rem;
+}
+.item{
+    padding: 1.5rem;
+    margin: 1rem 0;
+	border-radius: .3rem;
+    background-color: orangered;
+    min-height: 10vh;
+}
+
+nav, main, aside {
+    display: left;
+}
+
+
+.table_wrapper {
+	display: table;
+	width:100%;
+}
+
+nav, main, aside {
+    display: table-cell;
+}
+
+nav, aside {
+    width: 20%;
+}
+main {
+    width: 60%;
+}

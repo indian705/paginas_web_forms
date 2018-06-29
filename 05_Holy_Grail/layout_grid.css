@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+	background-color: aquamarine;
+	text-transform: uppercase;
+	color: white;
+}
+.grid{
+	padding: 1rem;
+}
+.item{
+    padding: 1.5rem;
+    margin: 1rem 0;
+	border-radius: .3rem;
+    background-color: orangered;
+    min-height: 10vh;
+}
+
+.grid_wrapper{
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows:auto 1fr auto;
+    grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+}
+
+header {
+    grid-area:header;
+}
+
+footer {
+    grid-area:footer;
+}
+
+/* header, footer{
+    grid-column:1/-1
+}
+ */

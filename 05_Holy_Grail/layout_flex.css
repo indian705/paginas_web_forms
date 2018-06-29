@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+	background-color: aquamarine;
+	text-transform: uppercase;
+	color: white;
+}
+.grid{
+	padding: 1rem;
+}
+.item{
+    padding: 1.5rem;
+    margin: 1rem 0;
+	border-radius: .3rem;
+    background-color: orangered;
+    min-height: 10vh;
+}
+.flex_wrapper{
+    display:flex;    
+}
+
+nav, aside {
+    flex:1 1 20%;
+}
+main {
+    flex:1 1 60%;
+}
+
+aside{
+    align-self:center;
+}
