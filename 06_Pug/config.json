@@ -1,0 +1,13 @@
+{
+    "idioma": "es",
+    "metalenguaje": "Pug",
+    "titulo": "Iniciando Pug",
+    "menuItems": ["Home", "Avanzado", "About"],
+    "cursos": [
+        {"nombre":"C#", "codigo":"37"},
+        {"nombre":"Java", "codigo":"84"},
+        {"nombre":"JavaScript", "codigo":"13"}]
+
+}
+
+

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+html(lang=idioma)
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        //- title #{titulo}
+        title= titulo
+
+    body
+
+        //Esto es un comentario
+
+        //Esto es un comentario 
+            de varias líneas
+
+        //- Esto es un comentario sólo de Pug
+
+        //- Esto es un comentario sólo de Pug
+            de varias líneas
+
+        //- Añadiendo contenido en varias líneas
+
+        p
+            | Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            | Inventore consequuntur, nobis nihil ea aliquam repellat quis voluptatum
+            | laborum repudiandae natus iste? Minima non necessitatibus, 
+            | possimus quod est numquam qui laudantium.
+
+        //- ATAJO
+
+        pre.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Inventore consequuntur, nobis nihil ea aliquam repellat quis voluptatum
+            laborum repudiandae natus iste? Minima non necessitatibus, 
+            possimus quod est numquam qui laudantium.
+
+        // Elementos inline
+
+        h1 Ejemplos de 
+            i #{metalenguaje.toUpperCase()}
+        p PUG es un 
+            b lenguaje de plantillas 
+            | basado en JS
+
+        p PUG es un <b>lenguaje de plantillas</b> basado en JS
+
+        //- Atributos
+
+        div(id="div1", class="principal")
+
+        //- ATAJOS. Atributos
+
+        div#div2.principal
+
+        #div3.principal
+
+        //- Bloques de expansión
+
+        nav 
+            ul
+                li: a(href="#"+menuItems[0].toLowerCase()) #{menuItems[0]} 
+                li
+                    a(href="page1.html") #{menuItems[1]}
+                li: a(href="#"+menuItems[2].toLowerCase()) #{menuItems[2]} 
+
+        //- Variables con HTML
+        -let html = "<p>Esto es un párrafo</p>"
+
+        div= html
+
