@@ -57,3 +57,12 @@ html(lang=idioma)
             button(type="submit") Enviar
 
 
+        //- Iteraciones WHILE
+
+        - let aSections = ['Inicio', 'Porfolio', 'Clientes', 'About']
+        nav
+            ul
+                - let i=0
+                while i < aSections.length
+                    li: a(href="#"+aSections[i].toLowerCase())= aSections[i]
+                    - i++
