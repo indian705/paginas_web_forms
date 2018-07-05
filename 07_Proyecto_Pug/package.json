@@ -4,10 +4,14 @@
   "description": "Ejercicios .Unidad 3 del módulo 1",
   "main": "index.js",
   "scripts": {
-    "start": "parallelshell \"npm run server\"  \"npm run pug:w\" ",
+    "start1": "parallelshell \"npm run server\" \"npm run sass:watch\" ",
+    "start": "parallelshell \"npm run server\" \"npm run sass:watch\" \"npm run pug:w\" ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "pug": "pug -P -O ./config.json -p ./src/pug/partials ./src/pug -o ./dist",
     "pug:w": "pug -w -P -O ./config.json -p ./src/pug/partials ./src/pug -o ./dist",
+    "sass": "sass src/sass:dist/css",
+    "sass:watch": "nodemon -e src/sass -x \"sass src/sass:dist/css\"",
+    "sass:w":""node-sass -watch scss -o css"
     "server": "http-server"
   },
   "repository": {
@@ -25,6 +29,7 @@
     "bootstrap": "^4.1.1"
   },
   "devDependencies": {
+    "node-sass": "^4.9.1",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6"
   }
