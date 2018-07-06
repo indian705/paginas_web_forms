@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start1": "parallelshell \"npm run server\" \"npm run sass:watch\" ",
-    "start": "parallelshell \"npm run server\" \"npm run sass:watch\" \"npm run pug:w\" ",
+    "start:parcial": "parallelshell \"npm run srv\"  \"npm run sass:watch\"",
+    "start": "parallelshell \"npm run srv\"  \"npm run sass:w\" \"npm run pug:w\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pug": "pug -P -O ./config.json -p ./src/pug/partials ./src/pug -o ./dist",
-    "pug:w": "pug -w -P -O ./config.json -p ./src/pug/partials ./src/pug -o ./dist",
+    "pug": "pug -P -O ./config.json -p ./src/partials ./src/pug -o ./dist",
+    "pug:w": "pug -w -P -O ./config.json -p ./src/partials ./src/pug -o ./dist",
+    "srv": "http-server",
     "sass": "sass src/sass:dist/css",
-    "sass:watch": "nodemon -e src/sass -x \"sass src/sass:dist/css\"",
-    "sass:w":""node-sass -watch scss -o css"
-    "server": "http-server"
+    "sass:watch": "nodemon -e src/sass -x \"npm run sass\"",
+    "sass:w" : "node-sass --watch src/sass -o dist/css"
   },
   "repository": {
     "type": "git",
